@@ -1,1 +1,1 @@
-Saya mengikuti bootcamp Laravel Web Dev karena ingin meningkatkan kemampuan dalam pengembangan web, khususnya pada sisi backend. Saya ingin memahami cara membangun aplikasi web yang terstruktur dan profesional menggunakan Laravel. Harapan saya setelah mengikuti bootcamp ini adalah mampu membuat project web sendiri, meningkatkan portofolio, serta memiliki bekal yang cukup untuk melamar pekerjaan di bidang web development.
+saya mengikuti bootcamp biar jago ngoding

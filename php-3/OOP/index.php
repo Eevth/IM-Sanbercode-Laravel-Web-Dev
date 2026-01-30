@@ -3,21 +3,28 @@ require_once "animal.php";
 require_once "Frog.php";
 require_once "Ape.php";
 
-// Release 0
+/* ===== Sheep ===== */
 $sheep = new Animal("shaun");
-echo $sheep->name . "<br>";
-echo $sheep->legs . "<br>";
-echo $sheep->cold_blooded . "<br><br>";
+echo "Name : " . $sheep->name . "<br>";
+echo "legs : " . $sheep->legs . "<br>";
+echo "cold blooded : " . $sheep->cold_blooded . "<br><br>";
 
-// Release 1
-$sungokong = new Ape("kera sakti");
-echo $sungokong->name . "<br>";
-$sungokong->yell();
+/* ===== Frog ===== */
+$kodok = new Frog("buduk");
+echo "Name : " . $kodok->name . "<br>";
+echo "legs : " . $kodok->legs . "<br>";
+echo "cold blooded : " . $kodok->cold_blooded . "<br>";
+echo "Jump : ";
+$kodok->jump();
 echo "<br><br>";
 
-$kodok = new Frog("buduk");
-echo $kodok->name . "<br>";
-$kodok->jump();
+/* ===== Ape ===== */
+$sungokong = new Ape("kera sakti");
+echo "Name : " . $sungokong->name . "<br>";
+echo "legs : " . $sungokong->legs . "<br>";
+echo "cold blooded : " . $sungokong->cold_blooded . "<br>";
+echo "Yell : ";
+$sungokong->yell();
 
 
-echo "<br> bang hop hop buduk itu apaann😭<br>";
+echo "<h3> bang hop hop buduk itu apaann😭</h3>";

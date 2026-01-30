@@ -27,4 +27,4 @@ echo "Yell : ";
 $sungokong->yell();
 
 
-echo "<h3> bang hop hop buduk itu apaann😭</h3>";
+echo "<h3> bang hop hop buduk itu apaannn😭</h3>";

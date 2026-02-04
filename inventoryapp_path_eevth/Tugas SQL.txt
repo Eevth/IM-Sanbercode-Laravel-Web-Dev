@@ -1,0 +1,80 @@
+
+CREATE DATABASE myshop;
+USE myshop;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    price INT,
+    stock INT,
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+-- =========================
+-- 3. MEMASUKKAN DATA
+-- =========================
+
+-- users
+INSERT INTO users (name, email, password) VALUES
+('Budi Santoso', 'budi@gmail.com', 'budi123'),
+('Siti Aisyah', 'siti@gmail.com', 'siti123');
+
+-- categories
+INSERT INTO categories (name) VALUES
+('elektronik'),
+('pakaian'),
+('aksesoris'),
+('pria'),
+('wanita');
+
+-- items
+INSERT INTO items (name, description, price, stock, category_id) VALUES
+('HP poko nya oke x67 pro', 'Ponsel android untuk komunikasi dan media sosial', 4000000, 100, 1),
+('Kaos Polo Lokal', 'Kaos bahan katun lokal nyaman dipakai harian', 150000, 50, 2),
+('Jam Tangan Pria Casio', 'Jam tangan analog dengan desain sederhana', 2000000, 10, 3);
+
+-- =========================
+-- 4. MENGAMBIL DATA
+-- =========================
+
+-- a. Ambil data users tanpa password
+SELECT id, name, email FROM users;
+
+-- b. Ambil items dengan harga di atas 1 juta
+SELECT * FROM items WHERE price > 1000000;
+
+-- b. Ambil items dengan nama mengandung kata "kaos"
+SELECT * FROM items WHERE name LIKE '%kaos%';
+
+-- c. Join items dengan categories
+SELECT 
+    items.name,
+    items.description,
+    items.price,
+    items.stock,
+    items.category_id,
+    categories.name AS kategori
+FROM items
+JOIN categories ON items.category_id = categories.id;
+
+-- =========================
+-- 5. MENGUBAH DATA
+-- =========================
+
+UPDATE items
+SET price = 2500000
+WHERE name = 'HP poko nya oke x67 pro';

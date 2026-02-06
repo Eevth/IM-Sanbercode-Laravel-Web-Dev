@@ -8,7 +8,7 @@ class FormController extends Controller
 {
     public function showRegisterForm()
     {
-        return view('register');
+        return view('Register');
     }
 
     public function processRegister(Request $request)

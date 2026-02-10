@@ -3,20 +3,41 @@
 @section('title', 'Register - Inventory App')
 
 @section('content')
-    <h1>Form Registrasi</h1>
+    <div class="row row-cards justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="h1 text-center mb-4">Form Registrasi</h1>
 
-    @if (session('error'))
-        <p style="color: red;">{{ session('error') }}</p>
-    @endif
+                    @if (session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
 
-    <form method="POST" action="{{ route('register.process') }}">
-        @csrf
+                    <form method="POST" action="{{ route('register.process') }}">
+                        @csrf
 
-        <p>First name: <input type="text" name="first_name" value="{{ old('first_name') }}" required></p>
-        <p>Last name: <input type="text" name="last_name" value="{{ old('last_name') }}" required></p>
+                        <div class="mb-3">
+                            <label class="form-label">Nama Depan</label>
+                            <input type="text" name="first_name" value="{{ old('first_name') }}" class="form-control" placeholder="Nama Depan" required>
+                        </div>
 
-        <button type="submit">Submit & Lanjut</button>
-    </form>
+                        <div class="mb-3">
+                            <label class="form-label">Nama Belakang</label>
+                            <input type="text" name="last_name" value="{{ old('last_name') }}" class="form-control" placeholder="Nama Belakang" required>
+                        </div>
 
-    <p><a href="{{ route('home') }}">Kembali ke Home</a></p>
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary w-100">Submit & Lanjut</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="{{ route('home') }}" class="text-muted">Kembali ke Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

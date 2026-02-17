@@ -12,15 +12,15 @@
 
                     <h2 class="h2 mt-5 mb-3">Benefit Join di SanberBookBook</h2>
                     <ul class="list-unstyled">
-                        <li>Mendapat motivasi dari sesama developer</li>
-                        <li>Sharing knowledge dari para mastah Sanber</li>
+                        <li>Jadi orang ganteng
+                        <li>Jadi orang pinter
                         <li>Dibuat oleh calon web developer terbaik</li>
                     </ul>
 
                     <h2 class="h2 mt-5 mb-3">Cara Bergabung ke SanberBookBook</h2>
                     <ol>
                         <li>Mengunjungi Website ini</li>
-                        <li>Mendaftar di <a href="{{ route('register.form') }}" class="text-primary">Form Sign Up</a></li>
+                        <li>Mendaftar di <a href="{{ route('register.form') }}" class="text-primary">di sini</a></li>
                         <li>Selesai</li>
                     </ol>
 
